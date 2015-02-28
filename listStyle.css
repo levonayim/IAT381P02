@@ -106,9 +106,6 @@ a:focus {
 	transition: transform .15s;
 	z-index: 1;
 	@extend .noflick;
-
-	&:hover {
-		cursor: move;
 	}
 	&.ui-draggable-dragging:nth-child(n) {
 		box-shadow: 5px 5px 15px 0 rgba(0,0,0,.3);
@@ -118,26 +115,23 @@ a:focus {
 		transition: transform .150s;
 	}
 
-	textarea {
-		background-color: transparent;
+textarea {
+	background-color: transparent;
+	border: none;
+	resize: vertical;
+	font-family: "Gloria Hallelujah", cursive;
+	width: 100%;
+	padding: 5px;
+	&:focus {
+		outline: none;
 		border: none;
-		resize: vertical;
-		font-family: "Gloria Hallelujah", cursive;
-		width: 100%;
-		padding: 5px;
-		&:focus {
-			outline: none;
-			border: none;
-			box-shadow: 0 0 5px 1px rgba(0,0,0,.2) inset;
-		}
-		&.cnt {
-			min-height: 200px;
-		}
+		box-shadow: 0 0 5px 1px rgba(0,0,0,.2) inset;
 	}
-	&:nth-child(2n) {
-		background: #FAAACA;
-	}
+
+.cnt {
+	min-height: 200px;
 }
+	
 
 /* Button style  */
 .button {
@@ -151,28 +145,6 @@ a:focus {
 	text-decoration: none;
 	transition: transform .150s, background .01s;
 	@extend .noflick;
-
-
-	&.remove {
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		width: 36px;
-		height: 36px;
-		border-radius: 50%;
-		background-color: #E01C12;
-		text-align: center;
-		line-height: 16px;
-		padding: 10px;
-		border-color: #B30000;
-		font-style: 1.6em;
-		font-weight: bolder;
-		font-family: Helvetica, Arial, sans-serif;
-
-		&:hover {
-			background-color: #EF0005;
-		}
-	}
 }
 
 #add_new {
